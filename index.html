@@ -10,24 +10,59 @@
     <!-- Include the Bootstrap JavaScript file from CDN -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
+    <!-- Include the Pure CSS file from CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Include a custom CSS file -->
+    <link rel="stylesheet" href="./Assets/style.css">
+    
     <title>welcome page</title>
 </head>
 
 <body>
     <header>
+        <!-- Navbar Start -->
+            <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background: linear-gradient(45deg,hsla(168, 85%, 52%, 0.7), hsla(263, 88%, 45%, 0.7) 100%);"
+              <div class="container-fluid">
+                  <ul class="navbar-nav ms-auto mb-6 mb-lg-0">
+                    <li class="nav-item">
+                      <a class="nav-link" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="./contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="termspage.html">Terms & Privacy</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="AboutUspage.html">About Us</a>
+                    </li>
+                  </ul>
+              </div>
+            </nav>
+        <!-- Navbar End -->
+
         <!-- Hero Banner Start -->
-        <div id="herobanner" class="p-5 text-center bg-image" style="
+        <div id="herobanner" class="p-5 text-center bg-image rounded-3" style="
             background-image: url(./Assets/images/suburbsrf.jpg);
             width: 100vw;
             height: 100vh;">
-            <div class="d-flex justify-content-center align-items-center h-100">
-                <div class="text-white">
-                    <h1 class="mb-3 mt-5">Real Estate App</h1>
-                    <h4 class="mb-3">Find Your Neighborhood. Find Your Community . Find Your Life.</h4>
-                    <div class="form row">
+
+            <div class="mask position-absolute top-50 start-50 translate-middle" style="background: linear-gradient(45deg,hsla(168, 85%, 52%, 0.7), hsla(263, 88%, 45%, 0.7) 100%);">
+                <div class="d-flex justify-content-center align-items-center h-100 ">
+                    <div>
+                        <h1 class="mb-3 mt-5">Real Estate App</h1>
+                        <h2 class="mb-3">Find Your Neighborhood. Find Your Community . Find Your Life.</h4>
+                        <div class="form row">
+                        </div>
+                        <a class="btn btn-outline-light btn-dark btn-lg mb-3 mt-4" href="POIpage.html" role="button">Your Journey
+                            Begins Here</a>
                     </div>
-                    <a class="btn btn-outline-light btn-lg mb-3 mt-4" href="POIpage.html" role="button">Your Journey
-                        Begins Here</a>
                 </div>
             </div>
         </div>
