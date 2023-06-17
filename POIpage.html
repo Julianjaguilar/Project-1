@@ -64,135 +64,138 @@
             <!-- Navbar End -->
         </header>
         
-        <!-- Container for the POI search section -->
-        <div id="selection ">
-            <h2 class="mb-3 mt-5"> Search Nearby Places!</h2>
-            
-            <!-- Input field for entering the address -->
-            <input type="search" placeholder="Enter Your Address Here !" id="addressInput" class="btn form-control mt-3">
+        <div class="container-fluid">
+            <!-- Container for the POI search section -->
+            <br>
+            <div id="selection ">
+                <h2 class="mb-3 mt-5 text-center"> Search Nearby Places!</h2>
+                
+                <!-- Input field for entering the address -->
+                <input type="search" placeholder="Enter Your Address Here !" id="addressInput" class="btn form-control mt-3">
 
-            <!-- Button for toggling map options -->
-            <button class="btn btn-info" type="button" data-bs-toggle="collapse" data-bs-target="#mapOptions" aria-expanded="false" aria-controls="mapOptions">
-                Map Options
-            </button>
+                <!-- Button for toggling map options -->
+                <button class="btn btn-info" type="button" data-bs-toggle="collapse" data-bs-target="#mapOptions" aria-expanded="false" aria-controls="mapOptions">
+                    Map Options
+                </button>
 
-            <!-- Container for the collapsible map options -->
-            <div class="collapse" id="mapOptions">
-                <div class="card card-body">
-                    <div class="row">
-                        <div class="col">
-                            <!-- Dropdown for selecting from search history -->
-                            <select id="searchesDropdown">
-                                <option value="" selected>Select from history...</option>
-                                <!-- Other options will be added here dynamically by JavaScript -->
-                            </select>
+                <!-- Container for the collapsible map options -->
+                <div class="collapse" id="mapOptions">
+                    <div class="card card-body">
+                        <div class="row">
+                            <div class="col">
+                                <!-- Dropdown for selecting from search history -->
+                                <select id="searchesDropdown">
+                                    <option value="" selected>Select from history...</option>
+                                    <!-- Other options will be added here dynamically by JavaScript -->
+                                </select>
+                            </div>
+                            <div class="col">
+                                <!-- Button for clearing search history -->
+                                <button class="btn btn-sm btn-warning" id="clearHistoryBtn">Clear</button>
+                            </div>
                         </div>
-                        <div class="col">
-                            <!-- Button for clearing search history -->
-                            <button class="btn btn-sm btn-warning" id="clearHistoryBtn">Clear</button>
+
+                        <!-- Slider for selecting radius -->
+                        <div class="slidecontainer mt-3">
+                            <input type="range" min="1" max="20" value="2" class="slider form-range" id="radius">
+                            <span id="radiusValue" class="ms-2">2 mi</span>
                         </div>
-                    </div>
 
-                    <!-- Slider for selecting radius -->
-                    <div class="slidecontainer mt-3">
-                        <input type="range" min="1" max="20" value="2" class="slider form-range" id="radius">
-                        <span id="radiusValue" class="ms-2">2 mi</span>
+                        <!-- Table for POI categories -->
+                        <table class="mt-3">
+                            <tr>
+                                <td>
+                                    <!-- Checkbox for Coffee category -->
+                                    <div class="form-check">
+                                        <input id="chk_coffee" type="checkbox" value="9376006" class="form-check-input">
+                                        <label for="chk_coffee" class="form-check-label">Coffee</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <!-- Checkbox for Park category -->
+                                    <div class="form-check">
+                                        <input id="chk_park" type="checkbox" value="9362" class="form-check-input">
+                                        <label for="chk_park" class="form-check-label">Park</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <!-- Checkbox for Supermarket category -->
+                                    <div class="form-check">
+                                        <input id="chk_supermarket" type="checkbox" value="7332005" class="form-check-input">
+                                        <label for="chk_supermarket" class="form-check-label">Super Market</label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <!-- Checkbox for Fast Food category -->
+                                    <div class="form-check">
+                                        <input id="chk_fastfood" type="checkbox" value="7315015" class="form-check-input">
+                                        <label for="chk_fastfood" class="form-check-label">Fast Food</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <!-- Checkbox for Restaurant category -->
+                                    <div class="form-check">
+                                        <input id="chk_restaurant" type="checkbox" value="7315020" class="form-check-input">
+                                        <label for="chk_restaurant" class="form-check-label">Restaurant</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <!-- Checkbox for Pizzaria category -->
+                                    <div class="form-check">
+                                        <input id="chk_pizzaria" type="checkbox" value="7315036" class="form-check-input">
+                                        <label for="chk_pizzaria" class="form-check-label">Pizzaria</label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <!-- Checkbox for Veterinarian category -->
+                                    <div class="form-check">
+                                        <input id="chk_veterinarian" type="checkbox" value="9375" class="form-check-input">
+                                        <label for="chk_veterinarian" class="form-check-label">Veterinarian</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <!-- Checkbox for Café category -->
+                                    <div class="form-check">
+                                        <input id="chk_cafe" type="checkbox" value="9376002" class="form-check-input">
+                                        <label for="chk_cafe" class="form-check-label">Café</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <!-- Checkbox for Ice Cream category -->
+                                    <div class="form-check">
+                                        <input id="chk_icecream" type="checkbox" value="7315078" class="form-check-input">
+                                        <label for="chk_icecream" class="form-check-label">Ice Cream</label>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
                     </div>
-
-                    <!-- Table for POI categories -->
-                    <table class="mt-3">
-                        <tr>
-                            <td>
-                                <!-- Checkbox for Coffee category -->
-                                <div class="form-check">
-                                    <input id="chk_coffee" type="checkbox" value="9376006" class="form-check-input">
-                                    <label for="chk_coffee" class="form-check-label">Coffee</label>
-                                </div>
-                            </td>
-                            <td>
-                                <!-- Checkbox for Park category -->
-                                <div class="form-check">
-                                    <input id="chk_park" type="checkbox" value="9362" class="form-check-input">
-                                    <label for="chk_park" class="form-check-label">Park</label>
-                                </div>
-                            </td>
-                            <td>
-                                <!-- Checkbox for Supermarket category -->
-                                <div class="form-check">
-                                    <input id="chk_supermarket" type="checkbox" value="7332005" class="form-check-input">
-                                    <label for="chk_supermarket" class="form-check-label">Super Market</label>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <!-- Checkbox for Fast Food category -->
-                                <div class="form-check">
-                                    <input id="chk_fastfood" type="checkbox" value="7315015" class="form-check-input">
-                                    <label for="chk_fastfood" class="form-check-label">Fast Food</label>
-                                </div>
-                            </td>
-                            <td>
-                                <!-- Checkbox for Restaurant category -->
-                                <div class="form-check">
-                                    <input id="chk_restaurant" type="checkbox" value="7315020" class="form-check-input">
-                                    <label for="chk_restaurant" class="form-check-label">Restaurant</label>
-                                </div>
-                            </td>
-                            <td>
-                                <!-- Checkbox for Pizzaria category -->
-                                <div class="form-check">
-                                    <input id="chk_pizzaria" type="checkbox" value="7315036" class="form-check-input">
-                                    <label for="chk_pizzaria" class="form-check-label">Pizzaria</label>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <!-- Checkbox for Veterinarian category -->
-                                <div class="form-check">
-                                    <input id="chk_veterinarian" type="checkbox" value="9375" class="form-check-input">
-                                    <label for="chk_veterinarian" class="form-check-label">Veterinarian</label>
-                                </div>
-                            </td>
-                            <td>
-                                <!-- Checkbox for Café category -->
-                                <div class="form-check">
-                                    <input id="chk_cafe" type="checkbox" value="9376002" class="form-check-input">
-                                    <label for="chk_cafe" class="form-check-label">Café</label>
-                                </div>
-                            </td>
-                            <td>
-                                <!-- Checkbox for Ice Cream category -->
-                                <div class="form-check">
-                                    <input id="chk_icecream" type="checkbox" value="7315078" class="form-check-input">
-                                    <label for="chk_icecream" class="form-check-label">Ice Cream</label>
-                                </div>
-                            </td>
-                        </tr>
-                    </table>
                 </div>
+
+                <!-- Button for initiating the search -->
+                <button id="searchBtn" class="btn btn-primary">Search</button>
+
+                <!-- Walk Score section -->
+                <span class="">
+                    <img src="https://cdn.walk.sc/images/api-logo.png" alt="Walk Score" />
+
+                    <!-- Placeholder for the Walk Score value -->
+                    <span id="walkscore"></span>
+
+                    <!-- Placeholder for the Walk Score description -->
+                    <span id="walkscore_description"></span>
+                </span>
             </div>
-
-            <!-- Button for initiating the search -->
-            <button id="searchBtn" class="btn btn-primary">Search</button>
-
-            <!-- Walk Score section -->
-            <span class="">
-                <img src="https://cdn.walk.sc/images/api-logo.png" alt="Walk Score" />
-
-                <!-- Placeholder for the Walk Score value -->
-                <span id="walkscore"></span>
-
-                <!-- Placeholder for the Walk Score description -->
-                <span id="walkscore_description"></span>
-            </span>
         </div>
 
-        <!-- Container for the map -->
-        <div id="map"></div>
+            <!-- Container for the map -->
+            <div id="map"></div>
 
-        <!-- Include the JavaScript file for custom script -->
-        <script src="./Assets/script.js"></script>
+            <!-- Include the JavaScript file for custom script -->
+            <script src="./Assets/script.js"></script>
     </body>
 </html>
