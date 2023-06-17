@@ -1,5 +1,5 @@
 # Project-1
-This is our First group Project ! Our group partners are Julian Aguilar (Me) , Ibrahima Diallo , Aliviah Hilliard and Keiquan (Key) Blackmon
+This is our First group Project ! Our group partners are Julian Aguilar, Ibrahima Diallo , Aliviah Hilliard and Keiquan (Key) Blackmon
 
 Project Description: The goal of this project was to create a web app, that met the following criteria:
 
