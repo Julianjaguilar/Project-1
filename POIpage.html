@@ -70,11 +70,12 @@
         <!-- Navbar End -->
         </header>
         
-        <div class="container-fluid" style="background-color: gray;">
+        <div class="container-fluid my-5" style="background-color: rgb(197, 191, 191);">
+            <div class="row p-4 pb-4 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
             <!-- Container for the POI search section -->
             <br>
             <div id="selection ">
-                <h4 class="mb-3 mt-5 text-center"> Search Nearby Places!</h2>
+                <h4 class="mb-3 mt-3 text-center"> Search Nearby Places!</h2>
                 
                 <!-- Input field for entering the address -->
                 <input type="search" placeholder="Enter Your Address Here !" id="addressInput" class="btn form-control mt-3 bg-white">
@@ -183,7 +184,7 @@
                 </div>
 
                 <!-- Button for initiating the search -->
-                <button id="searchBtn" class="btn btn-primary">Search</button>
+                <button id="searchBtn" class="btn btn-primary" style="background: linear-gradient(45deg,hsla(168, 85%, 52%, 0.7), hsla(263, 88%, 45%, 0.7) 100%)";>Search</button>
 
                 <!-- Walk Score section -->
                 <span class="">
@@ -196,11 +197,16 @@
                     <span id="walkscore_description"></span>
                 </span>
             </div>
+            </div>
+        </div>
         </div>
 
+        <div class="container-fluid my-5">
+            <div class="row p-4 pb-4 pe-lg-0 pt-lg-5 justify-content-center border shadow-lg">
             <!-- Container for the map -->
             <div id="map"></div>
-
+            </div>
+        </div>
             <!-- Include the JavaScript file for custom script -->
             <script src="./Assets/script.js"></script>
     </body>
