@@ -116,3 +116,12 @@ h2 {
     margin-top: 1em;
 }
 
+h4 {
+    font-weight: bold;
+    font-size: 200%;
+    color: white;
+}
+
+#button:hover{
+    background-color: rgb(28, 150, 198);
+}
