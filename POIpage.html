@@ -35,6 +35,7 @@
 
         <!-- Include a custom CSS file -->
         <link rel="stylesheet" href="./Assets/style.css">
+        <link rel="stylesheet" href="./Assets/poistyle.css">
 
         <title>Search Nearby Places!</title>
     </head>
@@ -70,20 +71,19 @@
         <!-- Navbar End -->
         </header>
         
-        <div class="container-fluid my-5" style="background-color: rgb(197, 191, 191);">
-            <div class="row p-4 pb-4 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+        <div class="container-fluid my-5">
+            <div class="row p-4 pb-4   align-items-center rounded-3 border shadow-lg">
             <!-- Container for the POI search section -->
             <br>
             <div id="selection ">
-                <h4 class="mb-3 mt-3 text-center"> Search Nearby Places!</h2>
+                <h4 class="mb-3 mt-3 text-center">Search Nearby Places!</h4>
                 
                 <!-- Input field for entering the address -->
-                <input type="search" placeholder="Enter Your Address Here !" id="addressInput" class="btn form-control mt-3 bg-white">
+                <input type="search" placeholder="Enter Your Address Here" id="addressInput" class="text-center form-control mt-3 mb-2 bg-white">
 
-                <!-- Button for toggling map options -->
-                <button class="btn btn-info" type="button" data-bs-toggle="collapse" data-bs-target="#mapOptions" aria-expanded="false" aria-controls="mapOptions">
-                    Map Options
-                </button>
+              
+                <!-- Button for initiating the search -->
+                <button id="searchBtn" class="btn btn-primary ms-2" style="background: linear-gradient(45deg,hsla(168, 85%, 52%, 0.7), hsla(263, 88%, 45%, 0.7) 100%)";>Search</button>
 
                 <!-- Container for the collapsible map options -->
                 <div class="collapse" id="mapOptions">
@@ -182,27 +182,30 @@
                         </table>
                     </div>
                 </div>
-
-                <!-- Button for initiating the search -->
-                <button id="searchBtn" class="btn btn-primary" style="background: linear-gradient(45deg,hsla(168, 85%, 52%, 0.7), hsla(263, 88%, 45%, 0.7) 100%)";>Search</button>
+                <!-- Button for toggling map options -->
+                <button class="btn btn-info" type="button" data-bs-toggle="collapse" data-bs-target="#mapOptions" aria-expanded="false" aria-controls="mapOptions">
+                    Map Options
+                </button>
+                                
 
                 <!-- Walk Score section -->
-                <span class="">
-                    <img src="https://cdn.walk.sc/images/api-logo.png" alt="Walk Score" />
+                <div class="mt-2">
+                    <img class="align-top" src="https://cdn.walk.sc/images/api-logo.png" alt="Walk Score">
 
                     <!-- Placeholder for the Walk Score value -->
                     <span id="walkscore"></span>
 
                     <!-- Placeholder for the Walk Score description -->
                     <span id="walkscore_description"></span>
-                </span>
+                    
+                </div>
             </div>
             </div>
         </div>
         </div>
 
         <div class="container-fluid my-5">
-            <div class="row p-4 pb-4 pe-lg-0 pt-lg-5 justify-content-center border shadow-lg">
+            <div class="row p-4 pb-4   justify-content-center border shadow-lg">
             <!-- Container for the map -->
             <div id="map"></div>
             </div>

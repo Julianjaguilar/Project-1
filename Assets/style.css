@@ -9,9 +9,8 @@
 #map {
     position:relative;
     top: 55%;
-    left: 19%;
-    width: 80vw;
-    height: 58vh;
+    width: 96vw;
+    height: 49vh;
     
 }
 #map h1 { line-height:1.1em; }
