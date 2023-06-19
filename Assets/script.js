@@ -213,3 +213,21 @@ $("#clearHistoryBtn").on("click", function() {
     $("#searchesDropdown").children("option:not(:first)").remove(); // clear the dropdown
 });
 
+//send email function
+function sendEmail(){
+
+    Email.send({
+        SecureToken: "1a233ae3-a03f-42a9-9bd8-b01afed00735",
+        To : 'ibrahimadiallo2394@gmail.com',
+        From : document.getElementById("multi-email").value,
+        Subject : "Contact us form Entry",
+        Body :"First Name: " + document.getElementById("multi-first-name").value
+            + "<br> Last Name: " + document.getElementById("multi-last-name").value
+            + "<br> E-Mail: " + document.getElementById("multi-email").value
+            + "<br> City: " + document.getElementById("multi-city").value
+            + "<br> Subject: " + document.getElementById("subject").value
+    }).then(
+      message => alert("Message Sent Succesfully")
+    );
+}
+
