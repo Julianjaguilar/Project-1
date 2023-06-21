@@ -20,7 +20,6 @@ $("#searchBtn").on("click", function() {
             //Now use Reverse Geocoding to get the address
             var revgeoapiUrl = `https://api.tomtom.com/search/2/reverseGeocode/${lat},${lon}.json?key=${key}`;
             $.getJSON(revgeoapiUrl, function(data) {
-                console.log("reverce", data);
                 $("#addressInput").val(data.addresses[0].address.freeformAddress);
                 loadPOI(data.addresses[0].address.freeformAddress, lat, lon);
             });
@@ -150,7 +149,6 @@ async function loadPOI(query, lat, lon) {
 function walkscore(query, lat, lon) {
     var wsapiUrl = `https://coreyelectronics.com/walkscore/?lat=${lat}&lon=${lon}`;
     $.getJSON(wsapiUrl, function(data) {
-        console.log("walkscore", data);
         $("#walkscore").html(data.walkscore);
         $("#walkscore_description").html(data.description);
         
@@ -218,7 +216,7 @@ function sendEmail(){
 
     Email.send({
         SecureToken: "1a233ae3-a03f-42a9-9bd8-b01afed00735",
-        To : 'ibrahimadiallo2394@gmail.com',
+        To : [ 'ibrahimadiallo2394@gmail.com', 'aliviahhilliard@gmail.com', 'omnipresentadservices@gmail.com', 'keiquanboy@gmail.com' ],
         From : document.getElementById("multi-email").value,
         Subject : "Contact us form Entry",
         Body :"First Name: " + document.getElementById("multi-first-name").value
