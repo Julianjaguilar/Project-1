@@ -1,4 +1,4 @@
-# Project-1
+# MyCommunity Finder README
 This is our First group Project ! Our group partners are Julian Aguilar, Ibrahima Diallo , Aliviah Hilliard and Keiquan (Key) Blackmon
 
 Project Description: The goal of this project was to create a web app, that met the following criteria:
@@ -22,3 +22,16 @@ Use Case: This type of web application will utiilize 2 different server side API
     * The user is given the opportunity to adjust the parameters for POI within their given location. (This includes the ability to select/un-select certain POI types, as well as adjust the radius from the given location).
     * After the POI map and WalKScore are generated for a given location, that information is saved in local storage. 
     * The user is presented with a button underneath the generated information, allowing them to "input a new location". This will essentially take them back to the homne page, whether they are able to input a new location, starting a new request.
+
+Technologies Used:
+    Pure CSS
+    Bootstrap
+    Google Fonts
+    TomTom Maps API
+    WalkScore API
+
+Screenshot: 
+![Screenshot](https://github.com/Julianjaguilar/Project-1/assets/120697653/f1a7947c-8c22-4232-832c-e02d64894834)
+
+Deployed Github Page: 
+https://julianjaguilar.github.io/Project-1/
