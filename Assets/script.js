@@ -148,7 +148,7 @@ async function loadPOI(query, lat, lon) {
 
 // This function retrieves the Walk Score for the provided latitude and longitude
 function walkscore(query, lat, lon) {
-    var wsapiUrl = `http://coreyelectronics.com/walkscore/?lat=${lat}&lon=${lon}`;
+    var wsapiUrl = `https://coreyelectronics.com/walkscore/?lat=${lat}&lon=${lon}`;
     $.getJSON(wsapiUrl, function(data) {
         console.log("walkscore", data);
         $("#walkscore").html(data.walkscore);
